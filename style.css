@@ -2624,9 +2624,6 @@ body {
     background: var(--gold);
   }
   
-  .burger.open span {
-    background: white !important;
-  }
   
   .nav:not(.open) {
     display: none;
