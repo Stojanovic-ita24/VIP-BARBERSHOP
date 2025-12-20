@@ -223,7 +223,7 @@ display:none;background:none;border:0;cursor:pointer
 }
 
 .burger span {
-display:block;width:27px;height:3px;background: var(--text-dark);margin: 5px 0;border-radius:2px;opacity:.9
+display:block;width:27px;height:3px;background: black;margin: 5px 0;border-radius:2px;opacity:.9
 }
 
 /* HERO */
@@ -3438,6 +3438,7 @@ body.lang-dropdown-open {
     width: 24px;
     height: 2.5px;
     margin: 4px 0;
+    background: black;
   }
 }
 

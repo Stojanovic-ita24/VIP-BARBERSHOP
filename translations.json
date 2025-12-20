@@ -39,6 +39,7 @@
     "footer_text": "© [year] VIP BARBERSHOP — Sva prava zadržana",
     "floating_button": "Zakaži termin",
     "play_video": "Pusti video",
+    "nav_booking_btn": "Rezerviši termin",
     "sound": "Uključi zvuk"
   },
   "en": {
@@ -81,6 +82,7 @@
     "footer_text": "© [year] VIP BARBERSHOP — All rights reserved",
     "floating_button": "Book Appointment",
     "play_video": "Play video",
+    "nav_booking_btn": "Book Appointment",
     "sound": "Turn sound on"
   },
   "ru": {
@@ -123,6 +125,7 @@
     "footer_text": "© [year] VIP BARBERSHOP — Все права защищены",
     "floating_button": "Забронировать Время",
     "play_video": "Воспроизвести видео",
+    "nav_booking_btn": "Забронировать",
     "sound": "Включить звук"
   }
 }
