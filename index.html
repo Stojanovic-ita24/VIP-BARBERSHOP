@@ -35,7 +35,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
-  <title>BarberShop Srbija</title>
+  <title data-key="site_title">BarberShop Srbija</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -126,20 +126,43 @@
         <div class="logo-badge" aria-hidden="true">
               <img src="images/gentlemen.png" alt="Barber logo">
         </div>
-        <span class="logo-text">VIP BARBERSHOP </span>
+        <span class="logo-text" data-key="site_title">VIP BARBERSHOP </span>
       </a>
 
+      
+<!-- Zamenite postojeći language-switcher sa ovim: -->
+
+<!-- Desktop verzija (3 dugmeta) -->
+<div class="language-switcher desktop">
+  <button class="lang-btn active" data-lang="sr">SR</button>
+  <button class="lang-btn" data-lang="en">EN</button>
+  <button class="lang-btn" data-lang="ru">RU</button>
+</div>
+
+<!-- Mobile verzija (toggle + dropdown) -->
+<div class="language-switcher mobile">
+  <button class="lang-toggle" id="langToggle" aria-label="Promeni jezik">
+    <span class="lang-current">SR</span>
+    <i class="fas fa-chevron-down"></i>
+  </button>
+  <div class="lang-dropdown" id="langDropdown">
+    <button class="lang-option active" data-lang="sr">SR - Srpski</button>
+    <button class="lang-option" data-lang="en">EN - English</button>
+    <button class="lang-option" data-lang="ru">RU - Русский</button>
+  </div>
+</div>
+
       <nav class="nav" id="nav">
-        <a href="#home" class="nav-link">Početna</a>
-        <a href="#services" class="nav-link">Usluge</a>
-        <a href="#about" class="nav-link">O nama</a>
-        <a href="#video" class="nav-link">Video</a>
-        <a href="#location" class="nav-link">Lokacija</a>
-        <a href="#booking" class="nav-link">Rezervacija</a>
+        <a href="#home" class="nav-link" data-key="nav_home">Početna</a>
+        <a href="#services" class="nav-link" data-key="nav_services">Usluge</a>
+        <a href="#about" class="nav-link" data-key="nav_about">O nama</a>
+        <a href="#video" class="nav-link" data-key="nav_video">Video</a>
+        <a href="#location" class="nav-link" data-key="nav_location">Lokacija</a>
+        <a href="#booking" class="nav-link" data-key="nav_booking">Rezervacija</a>
       </nav>
 
      <div class="header-cta">
-       <a class="nav-btn" href="#booking">Rezerviši termin</a>
+       <a class="nav-btn" href="#booking" data-key="nav_booking_btn">Rezerviši termin</a>
        <a class="nav-phone-icon" href="tel:+381637664464">
       <img src="images/phone-call.png" alt="phone icon">
     </a>
@@ -157,16 +180,16 @@
     <section id="home" class="hero reveal">
       <div class="hero-inner">
         <div class="hero-left">
-    <h1 class="display">
+    <h1 class="display" data-key="hero_title">
         U PREKO <span class="accent">90%</span>
         SLUČAJEVA DOBIJAŠ TERMIN 
         <span class="accent">ISTOG TRENUTKA</span><br>
     </h1>
-    <p class="short">24/7 · Na Svakoj Adresi · VIP usluga</p>
+    <p class="short" data-key="hero_short">24/7 · Na Svakoj Adresi · VIP usluga</p>
     <div class="hero-ctas">
-        <a class="btn btn-primary" href="#booking">ZAKAŽI ODMAH</a>
+        <a class="btn btn-primary" href="#booking" data-key="hero_cta">ZAKAŽI ODMAH</a>
     </div>
-    <p class="lead">
+    <p class="lead" data-key="hero_lead">
         Nema čekanja - uđeš i uživaš u VIP tretmanu!
     </p>
 </div>
@@ -186,8 +209,8 @@
     <section id="services" class="section services reveal">
   <div class="container">
     <div class="section-header reveal-up">
-      <h2>Naše usluge</h2>
-      <p>Klasična šišanja, sređivanje brade, fade stilovi i premium tretmani — sve sa pažnjom i preciznošću.</p>
+      <h2 data-key="services_title">Naše usluge</h2>
+      <p data-key="services_desc">Klasična šišanja, sređivanje brade, fade stilovi i premium tretmani — sve sa pažnjom i preciznošću.</p>
     </div>
 
     <div class="services-grid">
@@ -195,10 +218,10 @@
         <div class="icon">
           <img src="images/scissors.png" alt="Šišanje">
         </div>
-        <h3>Šišanje</h3>
-        <p class="price">3000 DIN</p>
+        <h3 data-key="service1_title">Šišanje</h3>
+        <p class="price" data-key="service1_price">3000 DIN</p>
         <div class="service-footer">
-        <a class="service-btn" href="#booking">Zakaži odmah</a>
+        <a class="service-btn" href="#booking" data-key="service_button">Zakaži odmah</a>
         </div>
       </article>
 
@@ -206,10 +229,10 @@
         <div class="icon">
           <img src="images/beard.png" alt="Brada">
         </div>
-        <h3>Šišanje i brada</h3>
-        <p class="price">3500 DIN</p>
+        <h3 data-key="service2_title">Šišanje i brada</h3>
+        <p class="price" data-key="service2_price">3500 DIN</p>
         <div class="service-footer">
-        <a class="service-btn" href="#booking">Zakaži odmah</a>
+        <a class="service-btn" href="#booking" data-key="service_button">Zakaži odmah</a>
         </div>
       </article>
 
@@ -217,10 +240,10 @@
         <div class="icon">
           <img src="images/diamond.png" alt="Premium tretman">
         </div>
-        <h3>VIP <br>DOLAZAK NA ADRESU</h3>
-        <p class="price">12000 DIN</p>
+        <h3 data-key="service3_title">VIP <br>DOLAZAK NA ADRESU</h3>
+        <p class="price" data-key="service3_price">12000 DIN</p>
         <div class="service-footer">
-        <a class="service-btn" href="#booking">Zakaži odmah</a>
+        <a class="service-btn" href="#booking" data-key="service_button">Zakaži odmah</a>
         </div>
       </article>
     </div>
@@ -248,14 +271,14 @@
 
 
         <div class="about-content reveal-up">
-          <h2>O nama</h2>
-          <p> Usluga VIP BARBERSHOP namenjena je svima koji žele vrhunsko šišanje bez čekanja i gužve. Pored rada u našem salonu, nudimo i VIP uslugu dolaska na kućnu adresu za klijente koji žele maksimalnu udobnost i privatnost.Profesionalna oprema, vrhunski pristup i pažnja posvećena svakom detalju.
+          <h2 data-key="about_title">O nama</h2>
+          <p data-key="about_text"> Usluga VIP BARBERSHOP namenjena je svima koji žele vrhunsko šišanje bez čekanja i gužve. Pored rada u našem salonu, nudimo i VIP uslugu dolaska na kućnu adresu za klijente koji žele maksimalnu udobnost i privatnost.Profesionalna oprema, vrhunski pristup i pažnja posvećena svakom detalju.
 Cilj je da dobiješ VIP tretman i savršenu frizuru — bilo u salonu ili u udobnosti svog doma.</p>
 
           <div class="stats">
-            <div><strong>5+</strong><span>Godina iskustva</span></div>
-            <div><strong>500+</strong><span>Zadovoljnih korisnika</span></div>
-            <div><strong>4.9★</strong><span>Prosečna ocena</span></div>
+            <div><strong>5+</strong><span data-key="stats_years">Godina iskustva</span></div>
+            <div><strong>500+</strong><span data-key="stats_clients">Zadovoljnih korisnika</span></div>
+            <div><strong>4.9★</strong><span data-key="stats_rating">Prosečna ocena</span></div>
           </div>
         </div>
       </div>
@@ -264,15 +287,15 @@ Cilj je da dobiješ VIP tretman i savršenu frizuru — bilo u salonu ili u udob
     <section id="video" class="section video-section reveal">
   <div class="container">
     <div class="section-header reveal-up">
-      <h2>Naš rad u akciji</h2>
-      <p>Pogledajte kako izgleda VIP tretman i naše šišanje uživo</p>
+      <h2 data-key="video_title">Naš rad u akciji</h2>
+      <p data-key="video_desc">Pogledajte kako izgleda VIP tretman i naše šišanje uživo</p>
     </div>
     
     <!-- DODAJ KLASU vertical-video-container -->
     <div class="video-container vertical-video-container reveal-up">
       <video muted loop playsinline class="video-player" id="mainVideo">
         <source src="images/barber.mp4" type="video/mp4">
-        Vaš browser ne podržava video tag.
+        <span data-key="video_not_supported">Vaš browser ne podržava video tag.</span>
       </video>
       
       <div class="video-overlay">
@@ -283,7 +306,7 @@ Cilj je da dobiješ VIP tretman i savršenu frizuru — bilo u salonu ili u udob
         </div>
         
         <div class="video-controls">
-          <button class="video-play-btn" id="videoPlay" aria-label="Pusti video">
+          <button class="video-play-btn" id="videoPlay" aria-label="Pusti video" data-key="play_video">
             <i class="fas fa-play"></i>
           </button>
           
@@ -291,7 +314,7 @@ Cilj je da dobiješ VIP tretman i savršenu frizuru — bilo u salonu ili u udob
             <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
           </div>
           
-          <button class="video-sound-btn" id="videoSound" aria-label="Uključi zvuk">
+          <button class="video-sound-btn" id="videoSound" aria-label="Uključi zvuk" data-key="sound">
             <i class="fas fa-volume-mute"></i>
           </button>
         </div>
@@ -299,7 +322,7 @@ Cilj je da dobiješ VIP tretman i savršenu frizuru — bilo u salonu ili u udob
     </div>
     
     <div class="video-caption reveal-up">
-      <p><i class="fas fa-video"></i> Premium tretman u pravom trenutku</p>
+      <p><i class="fas fa-video"></i> <span data-key="video_caption">Premium tretman u pravom trenutku</span></p>
     </div>
   </div>
 </section>
@@ -309,8 +332,8 @@ Cilj je da dobiješ VIP tretman i savršenu frizuru — bilo u salonu ili u udob
     <section id="location" class="section location-section reveal">
       <div class="container">
         <div class="section-header reveal-up">
-          <h2>Gde se nalazimo</h2>
-          <p>Pronađite nas lako u centru grada</p>
+          <h2 data-key="location_title">Gde se nalazimo</h2>
+          <p data-key="location_desc">Pronađite nas lako u centru grada</p>
         </div>
         
         <div class="location-inner reveal-up">
@@ -328,17 +351,17 @@ Cilj je da dobiješ VIP tretman i savršenu frizuru — bilo u salonu ili u udob
           
           <div class="location-info">
             <div class="info-card">
-              <h3><i class="fas fa-map-marker-alt"></i> Adresa</h3>
-              <p class="address">Bulevar Vudroa Vilsona 6<br>zgrada BW Aria, Beograd</p>
+              <h3><i class="fas fa-map-marker-alt"></i> <span data-key="address_title">Adresa</span></h3>
+              <p class="address" data-key="address">Bulevar Vudroa Vilsona 6<br>zgrada BW Aria, Beograd</p>
               
-              <h3><i class="fas fa-clock"></i> Radno vreme</h3>
-              <p>Dostupni smo <strong>24</strong> sata dnevno, <strong>7</strong> dana u nedelji.</p>
+              <h3><i class="fas fa-clock"></i> <span data-key="hours_title">Radno vreme</span></h3>
+              <p data-key="hours">Dostupni smo <strong>24</strong> sata dnevno, <strong>7</strong> dana u nedelji.</p>
               
-              <h3><i class="fas fa-phone"></i> Kontakt</h3>
+              <h3><i class="fas fa-phone"></i> <span data-key="contact_title">Kontakt</span></h3>
               <p class="phone"><a href="tel:+381637664464">+381 63 766 44 64</a></p>
               
               
-              <a href="#booking" class="btn btn-primary">
+              <a href="#booking" class="btn btn-primary" data-key="booking_button">
                 <i class="fas fa-calendar-check"></i> Rezerviši termin
               </a>
             </div>
@@ -372,14 +395,14 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
   <!-- FOOTER -->
  <footer class="site-footer">
   <div class="container footer-inner">
-    <p class="footer-copy">© <span id="year"></span> VIP BARBERSHOP — Sva prava zadržana</p>
+    <p class="footer-copy" data-key="footer_text">© <span id="year"></span> VIP BARBERSHOP — Sva prava zadržana</p>
   </div>
 </footer>
 
 <!-- FLOATING BOOKING BUTTON -->
 <button id="floatingBookingBtn" class="floating-btn" aria-label="Zakaži termin">
   <i class="fas fa-calendar-check"></i>
-  <span class="floating-btn-text">Zakaži termin</span>
+  <span class="floating-btn-text" data-key="floating_button">Zakaži termin</span>
 </button>
 
   <div id="lightbox" class="lightbox" aria-hidden="true">
@@ -388,5 +411,6 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
   </div>
 
   <script src="script.js"></script>
+<script src="language.js"></script>
 </body>
 </html>

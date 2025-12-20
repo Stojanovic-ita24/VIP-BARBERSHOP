@@ -439,7 +439,6 @@ if (floatingBtn) {
     // Proveri da li smo na hero sekciji
     if (heroSection) {
       const heroRect = heroSection.getBoundingClientRect();
-      // Ako je hero sekcija većinom vidljiva (npr. top je iznad 20% ekrana)
       if (heroRect.top < window.innerHeight * 0.8 && heroRect.bottom > window.innerHeight * 0.2) {
         shouldHide = true;
       }

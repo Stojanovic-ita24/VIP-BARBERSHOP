@@ -3023,8 +3023,441 @@ body {
   transform: translateY(0) !important;
 }
 
-/* Preload kritične resurse */
-/* Dodajte u <head> HTML-a umesto u CSS */
+/* LANGUAGE SWITCHER */
+.language-switcher {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-dark);
+}
+
+.lang-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.lang-btn.active {
+  background: var(--gold);
+  color: white;
+  border-color: var(--gold);
+}
+
+/* Responsive */
+@media (max-width: 1300px) {
+  .language-switcher {
+    margin-right: 15px;
+  }
+  
+  .lang-btn {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .language-switcher {
+    margin-right: 10px;
+    gap: 6px;
+  }
+  
+  .lang-btn {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+/* ========== NOVI LANGUAGE SWITCHER ========== */
+.language-switcher {
+  position: relative;
+  margin-left: auto;
+  margin-right: 20px;
+  z-index: 100;
+}
+
+/* Glavno dugme za toggle */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-dark);
+  min-width: 60px;
+  justify-content: center;
+}
+
+.lang-toggle:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.lang-toggle i {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.lang-toggle.open i {
+  transform: rotate(180deg);
+}
+
+/* Padajući meni */
+.lang-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 5px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  min-width: 140px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.lang-dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Opcije u padajućem meniju */
+.lang-option {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-dark);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.lang-option:last-child {
+  border-bottom: none;
+}
+
+.lang-option:hover {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--gold);
+}
+
+.lang-option.active {
+  background: var(--gold);
+  color: white;
+  font-weight: 600;
+}
+
+/* Stari switcher sakrij */
+.language-switcher .lang-btn {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .lang-toggle {
+    display: none;
+  }
+  
+  .lang-dropdown {
+    display: none;
+  }
+  
+  .language-switcher .lang-btn {
+    display: flex;
+    gap: 6px;
+  }
+  
+  .language-switcher {
+    display: flex;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 767px) {
+  .language-switcher {
+    margin-right: 10px;
+  }
+  
+  .lang-toggle {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+    min-width: 50px;
+  }
+  
+  .lang-dropdown {
+    min-width: 130px;
+  }
+  
+  .lang-option {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .nav.open ~ .header-cta .language-switcher {
+    position: static;
+  }
+}
+
+body.lang-dropdown-open {
+  overflow: hidden;
+}
+
+/* ========== NOVI LANGUAGE SWITCHER ========== */
+.language-switcher {
+  position: relative;
+  margin-left: auto;
+  margin-right: 20px;
+  z-index: 100;
+}
+
+/* Glavno dugme za toggle (MOBILE ONLY) */
+.lang-toggle {
+  display: none; 
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-dark);
+  min-width: 60px;
+  justify-content: center;
+}
+
+.lang-toggle:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.lang-toggle i {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.lang-toggle.open i {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown {
+  display: none; 
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 5px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  min-width: 140px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.lang-dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Opcije u padajućem meniju */
+.lang-option {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-dark);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.lang-option:last-child {
+  border-bottom: none;
+}
+
+.lang-option:hover {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--gold);
+}
+
+.lang-option.active {
+  background: var(--gold);
+  color: white;
+  font-weight: 600;
+}
+
+/* DESKTOP VERSION - 3 dugmeta */
+.language-switcher.desktop {
+  display: flex;
+  gap: 8px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+
+.lang-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.lang-btn.active {
+  background: var(--gold);
+  color: white;
+  border-color: var(--gold);
+}
+
+@media (max-width: 1300px) {
+  .nav.open ~ .header-cta .language-switcher {
+    position: static;
+  }
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 767px) {
+  .language-switcher {
+    margin-right: 10px;
+  }
+  
+  .lang-toggle {
+    display: flex;
+  }
+  
+  .lang-dropdown {
+    display: block;
+  }
+  
+  .lang-btn {
+    display: none !important;
+  }
+  
+  .language-switcher.desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .lang-toggle {
+    display: none;
+  }
+  
+  .lang-dropdown {
+    display: none;
+  }
+  
+  .lang-btn {
+    display: inline-block !important;
+  }
+  
+  .language-switcher.desktop {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Sakrij phone icon na mobilnom */
+@media (max-width: 480px) {
+  .nav-phone-icon {
+    display: none !important;
+  }
+  
+  /* Povećaj logo malo ako treba */
+  .logo-badge {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .logo-text {
+    font-size: 1rem !important;
+  }
+  
+  /* Smanji language toggle malo */
+  .lang-toggle {
+    padding: 6px 10px;
+    min-width: 45px;
+    font-size: 0.85rem;
+  }
+  
+  /* Smanji hamburger */
+  .burger {
+    margin-left: 5px;
+  }
+  
+  .burger span {
+    width: 24px;
+    height: 2.5px;
+    margin: 4px 0;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .nav-phone-icon {
+    display: flex;
+    width: 40px;
+    height: 36px;
+  }
+  
+  .nav-phone-icon img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Preload */
 /*
 <link rel="preload" href="style.css" as="style">
 <link rel="preload" href="script.js" as="script">
